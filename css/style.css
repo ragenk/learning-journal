@@ -15,6 +15,10 @@ body {
     background-color: #FFFFFF;
 }
 
+main {
+    background-color: #FAFAFA;
+}
+
 ul {
     list-style: none;
 }
@@ -160,7 +164,9 @@ header,
 
 /* About Page */
 
-.about-me {
+.about-me,
+.about-me__title,
+.about-me__body {
     display: grid;
     gap: 1em;
 }
@@ -191,7 +197,7 @@ img {
 }
 
 .avatar {
-    width: 40%;
+    max-width: 200px;
     border-radius: 50%;
     margin: auto;
 }
@@ -239,6 +245,34 @@ img {
     .logo-container {
         margin-left: 2em;
     }
+
+    .about-me {
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        gap: 2em;
+    }
+
+    .avatar {
+        grid-column: span 1;
+    }
+
+    .about-me__title {
+        grid-column: span 2;
+    }
+
+    .about-me__body {
+        grid-column: span 3;
+        margin-left: 4em;
+        margin-right: 4em;
+    }
+
+    .recent-post__title {
+        grid-column: span 3;
+    }
+
+    .article-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 @media (min-width: 870px) {
@@ -250,9 +284,5 @@ img {
             ".... btnc btnc btnc ...."
             "foot foot foot foot foot";
         gap: 1.5em 0;
-    }
-
-    .article-list {
-        grid-template-columns: 1fr 1fr 1fr;
     }
 }
