@@ -9,10 +9,13 @@
 }
 
 body {
+    display: block;
+    margin: 0 auto;
     font-family: "Source Sans 3", sans-serif;
     line-height: 1.25;
     color: #090909;
     background-color: #FFFFFF;
+    max-width: 1200px;
 }
 
 main {
